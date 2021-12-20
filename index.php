@@ -7,19 +7,29 @@
     <title>Document</title>
 
     <?php
-        $x = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, laudantium? Adipisci nihil debitis, at magni corrupti quaerat numquam voluptatem ad iusto tenetur eligendi omnis dolorum molestias ipsum saepe perspiciatis! Repellendus.";
+        $p = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, laudantium? Adipisci nihil debitis, at magni corrupti quaerat numquam voluptatem ad iusto tenetur eligendi omnis dolorum molestias ipsum saepe perspiciatis! Repellendus.";
+        
+        $word = $_GET['word'];
+        
+        $pCensored = str_replace ($word, '***', $p);
     ?>
 </head>
 <body>
     <p>
         <?php 
-            echo $x; 
+            echo $p; 
         ?>
     </p>
 
     <p>
         <?php
-        echo strlen($x);
+            echo strlen($p);
+        ?>
+    </p>
+
+    <p>
+        <?php
+            echo $pCensored;
         ?>
     </p>
 </body>
